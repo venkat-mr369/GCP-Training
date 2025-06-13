@@ -88,23 +88,23 @@ This high-level design focuses on building an **optimized, scalable, and cost-ef
 
 ---
 
-### 📌 Mermaid-Style Flow (HLD Overview)
+### 📌 HLD Overview 
 
 ```mermaid
 flowchart TD
-    A[User Access - Web/API] --> B[Load Balancer / API Gateway]
-    B --> C[Frontend<br/>(Cloud Run / GKE)]
-    C --> D[Backend Services<br/>(App Engine / GKE)]
-    D --> E[Cloud SQL<br/>BigQuery<br/>Firestore]
-    D --> F[Cloud Storage<br/>Filestore]
-    E --> G[Monitoring & Logging]
+    A[User Access - Web or API] --> B[Load Balancer or API Gateway]
+    B --> C["Frontend - Cloud Run or GKE"]
+    C --> D["Backend Services - App Engine or GKE"]
+    D --> E["Cloud SQL, BigQuery, Firestore"]
+    D --> F["Cloud Storage or Filestore"]
+    E --> G[Monitoring and Logging]
     F --> G
-    G --> H[Cloud Profiler<br/>Cloud Trace<br/>Network Intelligence]
-    D --> I[Autoscaling Engine<br/>(GKE HPA / Instance Groups)]
-    I --> J[Cost Optimization<br/>(CUD, Spot VMs, Schedulers)]
+    G --> H["Cloud Profiler, Trace, Network Intelligence"]
+    D --> I["Autoscaling Engine - HPA / Instance Groups"]
+    I --> J["Cost Optimization - CUD, Spot VMs, Scheduler"]
 
     subgraph Infra_Management
-        K[Terraform / Deployment Manager]
+        K[Terraform or Deployment Manager]
     end
     K --> B
     K --> C
