@@ -84,19 +84,19 @@ GCP provides native services, architecture patterns, and global infrastructure t
 
 ---
 
-### ✅ Mermaid (flowchart-style HLD)
+### ✅ HLD
 
 ```mermaid
 flowchart TD
-    A[User Access - Web / Mobile / API] --> B[Global Load Balancer]
-    B --> C1[Primary Region Services - GKE / App Engine]
-    B --> C2[Secondary Region (Failover) - Standby Services]
-    C1 --> D1[Cloud SQL (HA) / Spanner / BigQuery]
-    C2 --> D2[Backup Region Storage & DBs]
-    D1 --> E[Cloud Storage - Dual Region]
-    E --> F[Backups - Snapshots, Export]
-    F --> G[Monitoring & Alerting - Cloud Monitoring]
-    G --> H[Disaster Recovery Automation - Cloud Functions / Workflows]
+    A["User Access - Web, Mobile, or API"] --> B["Global Load Balancer"]
+    B --> C1["Primary Region Services - GKE or App Engine"]
+    B --> C2["Secondary Region - Standby Services"]
+    C1 --> D1["Primary Database - Cloud SQL, Spanner, BigQuery"]
+    C2 --> D2["Secondary Database - Backup Storage"]
+    D1 --> E["Cloud Storage - Dual Region"]
+    E --> F["Backups - Snapshots and Exports"]
+    F --> G["Monitoring and Alerting - Cloud Monitoring"]
+    G --> H["Disaster Recovery Automation - Cloud Functions or Workflows"]
 ```
 
 ---
