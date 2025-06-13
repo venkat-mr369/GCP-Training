@@ -114,6 +114,7 @@ flowchart TD
     K --> I
 ---
 
+```mermaid
 flowchart TD
     A[User Access - Web/API] --> B[Load Balancer / API Gateway]
     B --> C[Frontend<br/>(Cloud Run / GKE)]
@@ -135,7 +136,7 @@ flowchart TD
     K --> E
     K --> F
     K --> I
-
+```
 
 
 ## ✅ Summary Table
