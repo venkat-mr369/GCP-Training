@@ -124,13 +124,13 @@ gcloud spanner databases restore --destination-database=orders-db-restore \
 
 ```mermaid
 flowchart TD
-    A[User/API] --> B[App Server (Cloud Run / GKE / GCE)]
-    B --> C[Spanner Client Library]
-    C --> D[Cloud Spanner Instance]
-    D --> E[Multi-region Storage Layer]
-    D --> F[Query Execution Engine]
-    D --> G[Cloud Monitoring / Logging]
-    D --> H[Backup & PITR Layer]
+    A["User or API"] --> B["App Server - Cloud Run, GKE, GCE"]
+    B --> C["Spanner Client Library"]
+    C --> D["Cloud Spanner Instance"]
+    D --> E["Multi-region Storage Layer"]
+    D --> F["Query Execution Engine"]
+    D --> G["Cloud Monitoring and Logging"]
+    D --> H["Backup and Point-in-Time Recovery"]
 ```
 
 ---
