@@ -56,20 +56,20 @@ These services need to **communicate securely, reliably**, and **efficiently**, 
 
 ```mermaid
 flowchart TD
-    A[User - Web / Mobile App] --> B[Cloud Load Balancer]
-    B --> C[Ingress Gateway (ASM)]
-    C --> D1[Product Catalog Service (Envoy)]
-    C --> D2[User Profile Service (Envoy)]
-    C --> D3[Cart Service (Envoy)]
-    C --> D4[Checkout Service v1 (Envoy)]
-    C --> D5[Checkout Service v2 (Envoy - Canary)]
-    D4 --> E1[Payment Gateway (External)]
+    A["User - Web or Mobile App"] --> B["Cloud Load Balancer"]
+    B --> C["Ingress Gateway - ASM"]
+    C --> D1["Product Catalog Service - Envoy"]
+    C --> D2["User Profile Service - Envoy"]
+    C --> D3["Cart Service - Envoy"]
+    C --> D4["Checkout Service v1 - Envoy"]
+    C --> D5["Checkout Service v2 - Envoy (Canary)"]
+    D4 --> E1["Payment Gateway - External"]
     D5 --> E1
-    D4 --> F[Order Management Service (Envoy)]
-    F --> G[AlloyDB / Cloud SQL]
-    D1 --> H[Recommendation Service (Envoy)]
-    C --> I[Cloud Monitoring / Cloud Logging]
-    C --> J[Secret Manager + Workload Identity]
+    D4 --> F["Order Management Service - Envoy"]
+    F --> G["AlloyDB or Cloud SQL"]
+    D1 --> H["Recommendation Service - Envoy"]
+    C --> I["Cloud Monitoring and Logging"]
+    C --> J["Secret Manager and Workload Identity"]
 ```
 
 ---
