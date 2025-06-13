@@ -188,6 +188,16 @@ gcloud compute routers nats create alloydb-nat-config \
 * Integrate **BigQuery** for real-time analytics from AlloyDB
 * Enable **auto-failover and PITR** for AlloyDB
 
----
+```mermaid
+flowchart TD
+    A["User Interface (Web / Mobile)"] --> B["Load Balancer"]
+    B --> C["Anthos GKE Services (Microservices / APIs)"]
+    C --> D["Private IP Connection to AlloyDB"]
+    D --> E["AlloyDB Primary Instance"]
+    E --> F["Read Pool Instances (Optional for Analytics)"]
+    E --> G["Cloud Monitoring & Logging"]
+    E --> H["Automated Backups and PITR"]
+    C --> I["Secret Manager / Workload Identity"]
+```
 
 
