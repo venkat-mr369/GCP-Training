@@ -1,15 +1,6 @@
-To visualize your **High-Level Cloud Architecture Design** using Mermaid on GitHub or other markdown-supported platforms, follow these steps:
+# High-Level Design Diagram for Cloud Architecture
 
----
-
-### ✅ **1. How to render this Mermaid diagram in GitHub:**
-
-**Option A: Use a Markdown (.md) file with Mermaid syntax**
-
-````markdown
-# Cloud Architecture HLD
-
-```mermaid
+mermaid
 graph TD
 
     subgraph "Users & Clients"
@@ -58,34 +49,3 @@ graph TD
     M -.-> E & F & G & H & I & K
     N -.-> E & F & G & H & I & K
     O -.-> E & F & G & H & I & K
-````
-
-````
-
-📝 Tip: Save this as `README.md` or any `.md` file in a GitHub repository.
-
-> ✅ GitHub **now supports Mermaid** natively inside markdown files.
-
----
-
-### ✅ **2. Free Tools to Visualize Mermaid Diagrams:**
-
-You can also paste your Mermaid code into any of the following tools to **view/edit/export** the diagram:
-
-#### 🔧 Online Mermaid Editors:
-- [Mermaid Live Editor (Official)](https://mermaid.live)
-- [Mermaid.ink](https://mermaid.ink)
-- [StackEdit.io](https://stackedit.io) (Good for documentation)
-
-#### 📦 VS Code Plugin:
-Install the extension:
-```text
-Name: Markdown Preview Mermaid Support
-ID: bierner.markdown-mermaid
-````
-
-Once installed, you can preview `.md` files with Mermaid diagrams inside **VS Code**.
-
----
-
-Would you like this HLD converted into a **Word Document with a Visio-style diagram** as well?
