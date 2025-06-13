@@ -52,7 +52,7 @@ These services need to **communicate securely, reliably**, and **efficiently**, 
 
 ---
 
-### ✅ **Mermaid HLD: Service Mesh in Retail**
+### ✅ **HLD: Service Mesh in Retail**
 
 ```mermaid
 flowchart TD
