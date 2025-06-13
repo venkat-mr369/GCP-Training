@@ -1,6 +1,6 @@
-```
-flowchart TD
+```mermaid
 
+flowchart TD
     A[Users on Web/Mobile GUIs] --> B[Firewall / WAF]
     B --> C[API Gateway]
     C --> D[Frontend Dashboards & Client Interfaces]
