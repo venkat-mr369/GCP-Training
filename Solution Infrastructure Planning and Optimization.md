@@ -114,6 +114,30 @@ flowchart TD
     K --> I
 ---
 
+flowchart TD
+    A[User Access - Web/API] --> B[Load Balancer / API Gateway]
+    B --> C[Frontend<br/>(Cloud Run / GKE)]
+    C --> D[Backend Services<br/>(App Engine / GKE)]
+    D --> E[Cloud SQL<br/>BigQuery<br/>Firestore]
+    D --> F[Cloud Storage<br/>Filestore]
+    E --> G[Monitoring & Logging]
+    F --> G
+    G --> H[Cloud Profiler<br/>Cloud Trace<br/>Network Intelligence]
+    D --> I[Autoscaling Engine<br/>(GKE HPA / Instance Groups)]
+    I --> J[Cost Optimization<br/>(CUD, Spot VMs, Schedulers)]
+
+    subgraph Infra_Management
+        K[Terraform / Deployment Manager]
+    end
+    K --> B
+    K --> C
+    K --> D
+    K --> E
+    K --> F
+    K --> I
+
+
+
 ## ✅ Summary Table
 
 | Optimization Area     | GCP Services Used              | Benefit                   |
