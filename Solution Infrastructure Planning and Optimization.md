@@ -93,21 +93,25 @@ This high-level design focuses on building an **optimized, scalable, and cost-ef
 ```mermaid
 flowchart TD
     A[User Access - Web/API] --> B[Load Balancer / API Gateway]
-    B --> C[Frontend (Cloud Run / GKE)]
-    C --> D[Backend Services (App Engine / GKE)]
-    D --> E[Cloud SQL / BigQuery / Firestore]
-    D --> F[Cloud Storage / Filestore]
-    E & F --> G[Monitoring & Logging]
-    G --> H[Cloud Profiler / Cloud Trace / Network Intelligence]
-    D --> I[Autoscaling Engine (GKE HPA / Instance Groups)]
-    I --> J[Cost Optimization (CUD, Spot VMs, Schedulers)]
+    B --> C[Frontend<br/>(Cloud Run / GKE)]
+    C --> D[Backend Services<br/>(App Engine / GKE)]
+    D --> E[Cloud SQL<br/>BigQuery<br/>Firestore]
+    D --> F[Cloud Storage<br/>Filestore]
+    E --> G[Monitoring & Logging]
+    F --> G
+    G --> H[Cloud Profiler<br/>Cloud Trace<br/>Network Intelligence]
+    D --> I[Autoscaling Engine<br/>(GKE HPA / Instance Groups)]
+    I --> J[Cost Optimization<br/>(CUD, Spot VMs, Schedulers)]
 
-    subgraph Infra Management
+    subgraph Infra_Management
         K[Terraform / Deployment Manager]
     end
-    K --> B & C & D & E & F & I
-```
-
+    K --> B
+    K --> C
+    K --> D
+    K --> E
+    K --> F
+    K --> I
 ---
 
 ## ✅ Summary Table
