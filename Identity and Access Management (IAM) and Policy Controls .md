@@ -99,5 +99,3 @@ flowchart TD
 | Governance     | Audit Logs, Policy Analyzer, SCC    | Track and enforce access   |
 
 ---
-
-Would you like this IAM and Policy Controls HLD exported into a **Word document with a Visio-style image** for architecture documentation or training?
