@@ -95,19 +95,6 @@ This command creates a snapshot for backup or cloning purposes[1].
 ```bash
 gcloud compute instances delete test-vm-1 --zone=us-central1-a --delete-disks=boot
 ```
-This deletes the instance and its associated boot disk to avoid orphaned resources[1].
+This deletes the instance and its associated boot disk to avoid orphaned resources.
 
 ---
-
-These tasks cover creation, management, networking, and maintenance of Compute Engine VMs using `gcloud` commands, reflecting challenging practical scenarios in GCP Compute Engine administration. They are based on official Google Cloud documentation and common usage patterns[1][3][2].
-
-[1] https://cloud.google.com/compute/docs/gcloud-compute/common-commands
-[2] https://www.whizlabs.com/blog/gcp-associate-cloud-engineer-exam-questions/
-[3] https://www.linkedin.com/pulse/10-gcp-gcloud-commands-i-use-every-day-yugandhara-saste-tqssf
-[4] https://github.com/Ditectrev/Google-Cloud-Platform-GCP-Associate-Cloud-Engineer-Practice-Tests-Exams-Questions-Answers
-[5] https://www.cloudskillsboost.google/paths/12/course_templates/648/labs/548773
-[6] https://cloud.google.com/cli
-[7] https://www.youtube.com/watch?v=j274vq9a2Rs
-[8] https://www.gcpstudyhub.com/pages/components-of-the-google-cloud-sdk
-[9] https://www.eginnovations.com/blog/top-google-cloud-platform-gcp-services-explained-with-use-cases/
-[10] https://www.examtopics.com/exams/google/associate-cloud-engineer/view/
