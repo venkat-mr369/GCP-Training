@@ -93,6 +93,7 @@ To troubleshoot common issues with GCP Compute Engine VM instances effectively u
 | Stop/Start VM                      | `gcloud compute instances stop VM_NAME --zone=ZONE` / `gcloud compute instances start VM_NAME --zone=ZONE` |
 
 ***URLS* 
+```bash
 [1] https://www.googlecloudcommunity.com/gc/Infrastructure-Compute-Storage/VM-instance-keeps-freezing/m-p/806571
 [2] https://blog.nashtechglobal.com/creating-a-virtual-machine-in-google-cloud-console-cli/
 [3] https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-reboots
@@ -112,3 +113,4 @@ To troubleshoot common issues with GCP Compute Engine VM instances effectively u
 [17] https://www.googlecloudcommunity.com/gc/Infrastructure-Compute-Storage/VM-instance-is-currently-unavailable-not-acceptable-architecture/m-p/791098
 [18] https://stackoverflow.com/questions/78225316/cloud-shell-editor-how-to-connect-and-debug-through-a-vm-instance
 [19] https://www.youtube.com/watch?v=RO78WYoAr3k
+```
