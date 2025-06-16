@@ -1,4 +1,4 @@
-Here are **15 practical tasks** on **GCP Identity and Access Management (IAM)**
+General **15 practical tasks** on **GCP Identity and Access Management (IAM)**
 ---
 
 ## ✅ **Task 1: View IAM Policy for a Project**
