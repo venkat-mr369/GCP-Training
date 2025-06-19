@@ -77,9 +77,9 @@ gcloud services enable <API_NAME> --project=<PROJECT_ID>
 **Examples:**
 
 ```bash
-gcloud services enable compute.googleapis.com --project=my-gcp-project
-gcloud services enable bigquery.googleapis.com --project=my-gcp-project
-gcloud services enable iam.googleapis.com --project=my-gcp-project
+gcloud services enable compute.googleapis.com --project=approject-2025
+gcloud services enable bigquery.googleapis.com --project=approject-2025
+gcloud services enable iam.googleapis.com --project=approject-2025
 ```
 
 ---
@@ -93,7 +93,7 @@ gcloud services disable <API_NAME> --project=<PROJECT_ID>
 **Example:**
 
 ```bash
-gcloud services disable compute.googleapis.com --project=my-gcp-project
+gcloud services disable compute.googleapis.com --project=approject-2025
 ```
 
 ---
@@ -161,7 +161,7 @@ Here you go â€” very useful if you are automating or preparing for production ðŸ
 
 ```bash
 # Set your project ID
-PROJECT_ID=dev-project33
+PROJECT_ID=approject-2025
 
 # List of APIs to enable
 APIS=(
