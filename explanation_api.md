@@ -161,7 +161,7 @@ Here you go â€” very useful if you are automating or preparing for production ðŸ
 
 ```bash
 # Set your project ID
-PROJECT_ID=my-gcp-project-id
+PROJECT_ID=dev-project33
 
 # List of APIs to enable
 APIS=(
