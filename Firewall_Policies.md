@@ -59,47 +59,16 @@ This will display the rules and details of your firewall policy[4].
 
 **Summary Table: Key gcloud Commands**
 
-| Purpose                        | Command Example                                                                                           |
+| Purpose                         | Command Example                                                                                          |
 |---------------------------------|----------------------------------------------------------------------------------------------------------|
 | Create firewall policy          | `gcloud compute network-firewall-policies create org-wide-firewall-policy --description="..." --global`  |
-| Add rule to policy              | `gcloud compute network-firewall-policies rules create ...`                                               |
+| Add rule to policy              | `gcloud compute network-firewall-policies rules create ...`                                              |
 | Associate policy to network     | `gcloud compute network-firewall-policies associations create --firewall-policy=... --network=...`       |
 | View policy                     | `gcloud compute network-firewall-policies describe org-wide-firewall-policy --global`                    |
 
-**1. Allow SSH from 192.168.1.0/24**
-
-```sh
-gcloud compute network-firewall-policies rules create 900 \
-  --action=allow \
-  --description="Allow SSH from 192.168.1.0/24" \
-  --layer4-configs=tcp:22 \
-  --firewall-policy=org-wide-firewall-policy \
-  --src-ip-ranges=192.168.1.0/24 \
-  --global-firewall-policy \
-  --enable-logging
-```
-
-**2. Deny SSH from everywhere else**
-
-```sh
-gcloud compute network-firewall-policies rules create 1000 \
-  --action=deny \
-  --description="Deny SSH from all other sources" \
-  --layer4-configs=tcp:22 \
-  --firewall-policy=org-wide-firewall-policy \
-  --src-ip-ranges=0.0.0.0/0 \
-  --global-firewall-policy \
-  --enable-logging
-```
-
-**Explanation:**
-- The rule with priority 900 allows SSH from your trusted subnet.
-- The rule with priority 1000 denies SSH from all other sources.
-- Firewall rules are evaluated in order of ascending priority (i.e., lower numbers take precedence)[1][2].
-
 **Summary Table**
 
-| Priority | Action | Source IP Range      | Description                      |
+| Priority | Action | Source IP Range     | Description                      |
 |----------|--------|---------------------|----------------------------------|
 | 900      | allow  | 192.168.1.0/24      | Allow SSH from trusted subnet    |
 | 1000     | deny   | 0.0.0.0/0           | Deny SSH from all other sources  |
