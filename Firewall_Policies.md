@@ -16,12 +16,12 @@ This command creates a global firewall policy named `org-wide-firewall-policy` w
 - **Allow HTTP/HTTPS Traffic from Anywhere:**
 
 ```sh
-gcloud compute network-firewall-policies rules create 1000 \
+gcloud compute network-firewall-policies rules create 900 \
   --action=allow \
-  --description="Allow HTTP/HTTPS from anywhere" \
-  --layer4-configs=tcp:80,tcp:443 \
+  --description="Allow SSH from 192.168.1.0/24" \
+  --layer4-configs=tcp:22 \
   --firewall-policy=org-wide-firewall-policy \
-  --src-ip-ranges=0.0.0.0/0 \
+  --src-ip-ranges=192.168.1.0/24 \
   --global-firewall-policy \
   --enable-logging
 ```
@@ -29,15 +29,14 @@ gcloud compute network-firewall-policies rules create 1000 \
 - **Deny SSH from All Except a Specific Subnet:**
 
 ```sh
-gcloud compute network-firewall-policies rules create 900 \
+gcloud compute network-firewall-policies rules create 1000 \
   --action=deny \
-  --description="Deny SSH except from 192.168.1.0/24" \
+  --description="Deny SSH from all other sources" \
   --layer4-configs=tcp:22 \
   --firewall-policy=org-wide-firewall-policy \
   --src-ip-ranges=0.0.0.0/0 \
   --global-firewall-policy \
-  --enable-logging \
-  --target-ip-ranges=192.168.1.0/24
+  --enable-logging
 ```
 *(Adjust `--target-ip-ranges` as needed based on your policy logic.)*
 
@@ -66,4 +65,44 @@ This will display the rules and details of your firewall policy[4].
 | Add rule to policy              | `gcloud compute network-firewall-policies rules create ...`                                               |
 | Associate policy to network     | `gcloud compute network-firewall-policies associations create --firewall-policy=... --network=...`       |
 | View policy                     | `gcloud compute network-firewall-policies describe org-wide-firewall-policy --global`                    |
+
+**1. Allow SSH from 192.168.1.0/24**
+
+```sh
+gcloud compute network-firewall-policies rules create 900 \
+  --action=allow \
+  --description="Allow SSH from 192.168.1.0/24" \
+  --layer4-configs=tcp:22 \
+  --firewall-policy=org-wide-firewall-policy \
+  --src-ip-ranges=192.168.1.0/24 \
+  --global-firewall-policy \
+  --enable-logging
+```
+
+**2. Deny SSH from everywhere else**
+
+```sh
+gcloud compute network-firewall-policies rules create 1000 \
+  --action=deny \
+  --description="Deny SSH from all other sources" \
+  --layer4-configs=tcp:22 \
+  --firewall-policy=org-wide-firewall-policy \
+  --src-ip-ranges=0.0.0.0/0 \
+  --global-firewall-policy \
+  --enable-logging
+```
+
+**Explanation:**
+- The rule with priority 900 allows SSH from your trusted subnet.
+- The rule with priority 1000 denies SSH from all other sources.
+- Firewall rules are evaluated in order of ascending priority (i.e., lower numbers take precedence)[1][2].
+
+**Summary Table**
+
+| Priority | Action | Source IP Range      | Description                      |
+|----------|--------|---------------------|----------------------------------|
+| 900      | allow  | 192.168.1.0/24      | Allow SSH from trusted subnet    |
+| 1000     | deny   | 0.0.0.0/0           | Deny SSH from all other sources  |
+
+
 
