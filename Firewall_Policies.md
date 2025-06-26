@@ -48,7 +48,7 @@ gcloud compute network-firewall-policies associations create \
   --network=YOUR-VPC-NETWORK-NAME \
   --global-firewall-policy
 ```
-Replace `YOUR-VPC-NETWORK-NAME` with the actual name of your VPC network[4].
+Replace `YOUR-VPC-NETWORK-NAME` with the actual name of your VPC network.
 
 **4. View the Policy and Rules**
 
