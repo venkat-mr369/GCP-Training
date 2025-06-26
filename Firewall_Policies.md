@@ -41,11 +41,11 @@ gcloud compute network-firewall-policies rules create 1000 \
 *(Adjust `--target-ip-ranges` as needed based on your policy logic.)*
 
 **3. Associate the Firewall Policy with a VPC Network**
-
+VPC Network Name **mobiapp-vpc**
 ```sh
 gcloud compute network-firewall-policies associations create \
   --firewall-policy=org-wide-firewall-policy \
-  --network=splendid-sled-460802-q9 \
+  --network=mobiapp-vpc \
   --global-firewall-policy
 ```
 Replace `YOUR-VPC-NETWORK-NAME` with the actual name of your VPC network.
