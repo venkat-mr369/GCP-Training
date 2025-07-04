@@ -104,16 +104,16 @@ flowchart TD
     A[Client Application] --> B[Spanner API Endpoint]
     B --> C{Instance Type}
     C -- Regional --> D[Regional Instance]
-    C -- Global --> E[Global (Multi-Regional) Instance]
-    D --> F[3 Read-Write Replicas (Different Zones)]
-    E --> G[Read-Write + Read-Only Replicas (Multiple Regions)]
-    F --> H[Data Partitioning & Sharding]
+    C -- Global --> E[Global Multi-Regional Instance]
+    D --> F[3 Read-Write Replicas - Different Zones]
+    E --> G[Read-Write and Read-Only Replicas - Multiple Regions]
+    F --> H[Data Partitioning and Sharding]
     G --> H
-    H --> I[Strong Consistency (Paxos, TrueTime)]
+    H --> I[Strong Consistency - Paxos, TrueTime]
     I --> J[SQL Query Processing]
     J --> K[Automated Backups]
     K --> L[Backup Storage]
     L --> M[Restore Process]
-    M --> N[New/Restored Database]
+    M --> N[New or Restored Database]
     N --> O[Available to Applications]
 ```
