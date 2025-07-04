@@ -98,3 +98,22 @@ This level of availability is critical for mission-critical applications where e
 ### In Summary
 
 Google Cloud Spanner is engineered for organizations that require a highly available, strongly consistent, and globally scalable relational database. Its architecture, replication, backup/restore, and security features make it a robust choice for mission-critical workloads in finance, healthcare, retail, and other industries where downtime and data inconsistency are unacceptable.
+
+```mermaid 
+flowchart TD
+    A[Client Application] --> B[Spanner API Endpoint]
+    B --> C{Instance Type}
+    C -- Regional --> D[Regional Instance]
+    C -- Global --> E[Global (Multi-Regional) Instance]
+    D --> F[3 Read-Write Replicas (Different Zones)]
+    E --> G[Read-Write + Read-Only Replicas (Multiple Regions)]
+    F --> H[Data Partitioning & Sharding]
+    G --> H
+    H --> I[Strong Consistency (Paxos, TrueTime)]
+    I --> J[SQL Query Processing]
+    J --> K[Automated Backups]
+    K --> L[Backup Storage]
+    L --> M[Restore Process]
+    M --> N[New/Restored Database]
+    N --> O[Available to Applications]
+```
