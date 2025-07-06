@@ -1,7 +1,7 @@
 ### GCP ADMIN | GCP INFRA ADMIN | GCP SECURITY COURSE CONTENT
 
-**Trainer:** T. Venkat  
-**Total Duration:** ~35 Hours
+***Trainer:*** T. Venkat  
+***Total Duration:*** ~35 Hours
 ---
 
  1. Introduction to Cloud & GCP
