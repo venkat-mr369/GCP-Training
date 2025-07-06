@@ -1,7 +1,8 @@
-# GCP ADMIN | GCP INFRA ADMIN | GCP SECURITY COURSE CONTENT
-
+### GCP ADMIN | GCP INFRA ADMIN | GCP SECURITY COURSE CONTENT
+```bash
 **Trainer:** T. Venkat  
 **Total Duration:** ~35 Hours
+```
 
 ---
 
