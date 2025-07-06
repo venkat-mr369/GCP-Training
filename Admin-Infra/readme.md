@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Introduction to Cloud & GCP
+ 1. Introduction to Cloud & GCP
 **Duration:** 1 hour
 
 - Traditional IT vs. Cloud Computing  
@@ -18,7 +18,7 @@
 
 ---
 
-## 2. Cloud Computing & Basic Concepts
+### 2. Cloud Computing & Basic Concepts
 **Duration:** 1 hour
 
 - Cloud Service Providers Overview  
@@ -29,7 +29,7 @@
 
 ---
 
-## 3. Compute Engine (Virtual Machines)
+### 3. Compute Engine (Virtual Machines)
 **Duration:** 4 hours
 
 - VM Lifecycle, Types, and Configurations  
@@ -43,7 +43,7 @@
 
 ---
 
-## 4. Virtual Private Cloud (VPC)
+### 4. Virtual Private Cloud (VPC)
 **Duration:** 4 hours
 
 - VPC Types: Default, Auto Mode, Custom  
@@ -66,7 +66,7 @@
 
 ---
 
-## 5. Identity and Access Management (IAM)
+### 5. Identity and Access Management (IAM)
 **Duration:** 2.5 hours
 
 - IAM Concepts: Organizations, Roles, Policies  
@@ -80,7 +80,7 @@
 
 ---
 
-## 6. Google Cloud Storage (GCS)
+### 6. Google Cloud Storage (GCS)
 **Duration:** 2 hours
 
 - Object Storage Basics  
@@ -92,7 +92,7 @@
 
 ---
 
-## 7. Load Balancing & Autoscaling
+### 7. Load Balancing & Autoscaling
 **Duration:** 3 hours
 
 - Types of Load Balancers  
@@ -103,7 +103,7 @@
 
 ---
 
-## 8. Cloud SQL
+### 8. Cloud SQL
 **Duration:** 3 hours
 
 - Cloud SQL (MySQL, PostgreSQL, SQL Server)  
@@ -117,7 +117,7 @@
 
 ---
 
-## 9. Cloud Spanner
+### 9. Cloud Spanner
 **Duration:** 1 hour
 
 - Introduction & Features  
@@ -136,7 +136,7 @@
 
 ---
 
-## 11. Management & Monitoring
+### 11. Management & Monitoring
 **Duration:** 2 hours
 
 - Cloud Monitoring & Logging *(Hands-on)*  
@@ -146,7 +146,7 @@
 
 ---
 
-## 12. Kubernetes Engine (GKE) Administration
+### 12. Kubernetes Engine (GKE) Administration
 **Duration:** 4 hours
 
 - GKE Architecture & Concepts  
@@ -161,7 +161,7 @@
 
 ---
 
-## 13. Infrastructure as Code - Terraform with GCP
+### 13. Infrastructure as Code - Terraform with GCP
 **Duration:** 2.5 hours
 
 - Introduction to Terraform  
@@ -174,7 +174,7 @@
 
 ---
 
-## 14. Security & Compliance in GCP
+### 14. Security & Compliance in GCP
 **Duration:** 3.5 hours
 
 - Shared Responsibility Model  
@@ -189,7 +189,7 @@
 
 ---
 
-## 15. Miscellaneous & Advanced Topics
+### 15. Miscellaneous & Advanced Topics
 **Duration:** 3 hours
 
 - Bare Metal Solutions – Compute Engine  
@@ -201,7 +201,7 @@
 
 ---
 
-## Instructor Info
+### Instructor Info
 
 **Tirupati Venkat [T. Venkat]**  
 18 years of Experience in the IT Industry & Working in an MNC as a multi-cloud architect  
