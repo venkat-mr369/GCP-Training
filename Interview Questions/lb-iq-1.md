@@ -41,7 +41,7 @@ These services must frequently share data (e.g., the timesheet sends total worki
 
 | Microservice         | Example Action                                    | How It Connects                  |
 |----------------------|---------------------------------------------------|----------------------------------|
-| Timesheet Service    | Posts daily entries for employee #123             | API (private VPC)                |
+| Timesheet Service    | Posts daily entries for employee #215480          | API (private VPC)                |
 | Payroll Service      | Requests approved hours for payroll processing    | Calls Timesheet over internal LB |
 | Reporting Service    | Collects pay data for analytics                   | API calls inside the VPC         |
 
