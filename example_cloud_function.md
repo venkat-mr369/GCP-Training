@@ -20,6 +20,10 @@ def hello_world(request):
 
 If your function needs extra Python packages, add a file called `requirements.txt`.  
 For this simple example, it's not needed and can be left empty.
+```bash
+requests==2.31.0
+pandas>=2.0.0
+```
 
 ## 4. Deploy the Function
 
