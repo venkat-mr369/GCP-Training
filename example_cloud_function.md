@@ -1,13 +1,13 @@
-# Example: Deploying a Google Cloud Function Using gcloud
+### Example: Deploying a Google Cloud Function Using gcloud
 
 Below is a step-by-step example to deploy a simple Google Cloud Function from your local machine using the `gcloud` CLI, all without any external reference links.
 
-## 1. Prerequisites
+#### 1. Prerequisites
 
 - Google Cloud SDK installed (`gcloud`)
 - You are authenticated and have a Google Cloud project set (`gcloud init`)
 
-## 2. Sample Python Function (main.py)
+#### 2. Sample Python Function (main.py)
 
 Create a file called `main.py` with the following code:
 
@@ -16,7 +16,7 @@ def hello_world(request):
     return "Hello, World!"
 ```
 
-## 3. Create Requirements File (optional)
+#### 3. Create Requirements File (optional)
 
 If your function needs extra Python packages, add a file called `requirements.txt`.  
 For this simple example, it's not needed and can be left empty.
@@ -25,7 +25,7 @@ requests==2.31.0
 pandas>=2.0.0
 ```
 
-## 4. Deploy the Function
+#### 4. Deploy the Function
 
 Open a terminal in your function's folder and run:
 
@@ -43,7 +43,7 @@ gcloud functions deploy hello_world \
 - `--allow-unauthenticated`: Allows requests without authentication
 - `--entry-point`: The name of the function in your code to execute
 
-## 5. Call Your Function
+#### 5. Call Your Function
 
 After the deployment completes, the terminal will display a URL.  
 You can test the function by opening the given URL in your browser or by using curl:
@@ -58,7 +58,7 @@ This should return:
 Hello, World!
 ```
 
-## 6. Clean Up
+#### 6. Clean Up
 
 If you want to remove the function to avoid charges:
 
@@ -66,7 +66,7 @@ If you want to remove the function to avoid charges:
 gcloud functions delete hello_world
 ```
 
-### Notes
+#### Notes
 
 - Adjust the Python version and function name as needed.
 - For other languages (Node.js, Go, etc.), change the `--runtime` flag accordingly and write the function using that language’s syntax.
