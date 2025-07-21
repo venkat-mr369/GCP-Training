@@ -54,8 +54,8 @@ gcloud functions describe hello_world --region=us-central1 --project=splendid-sl
 
 This should return: the output find the uri and paste it in broswer
 
-```
-***uri:*** https://hello-world-ucwvrx3aka-uc.a.run.app
+```bash
+**uri:** https://hello-world-ucwvrx3aka-uc.a.run.app
 ```
 
 #### 6. Clean Up
