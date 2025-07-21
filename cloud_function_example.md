@@ -49,13 +49,13 @@ After the deployment completes, the terminal will display a URL.
 You can test the function by opening the given URL in your browser or by using curl:
 
 ```sh
-curl https://REGION-PROJECT_ID.cloudfunctions.net/hello_world
+gcloud functions describe hello_world --region=us-central1 --project=splendid-sled-460802-q9
 ```
 
-This should return:
+This should return: the output find the uri and paste it in broswer
 
 ```
-Hello, World!
+***uri:*** https://hello-world-ucwvrx3aka-uc.a.run.app
 ```
 
 #### 6. Clean Up
